@@ -32,7 +32,7 @@ namespace BraintreeASPExample.Controllers
         public ActionResult Create()
         {
             var gateway = config.GetGateway();
-            Decimal amount;
+            System.Decimal amount;
 
             try
             {
@@ -51,7 +51,7 @@ namespace BraintreeASPExample.Controllers
                 PaymentMethodNonce = nonce,
                 Options = new TransactionOptionsRequest
                 {
-                    SubmitForSettlement = true
+                    SubmitForSettlement = false
                 }
             };
 
